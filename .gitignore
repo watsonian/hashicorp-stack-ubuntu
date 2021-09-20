@@ -1,0 +1,8 @@
+.vagrant/*
+env/*
+jobs/*
+host_volumes/*
+config/nomad-client-host-volumes.hcl
+*.lic
+vault-keys.json
+!*/.gitkeep
