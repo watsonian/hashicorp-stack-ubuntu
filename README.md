@@ -64,3 +64,19 @@ and then running:
 export VAULT_ADDR="http://127.0.0.1:8200"
 vault operator unseal $(jq -r '.unseal_keys_hex[0]' /vagrant/vault-keys.json)
 ```
+
+## Nomad Host Volumes
+
+If you want any Nomad host volumes setup on the Nomad clients, you can create a
+file at `config/nomad-client-host-volumes.hcl` that defines them and it will
+get linked into the correct location to be loaded during the vagrant provisioning.
+The contents of a config file like that might look something like this:
+
+```
+client {
+  host_volume "some-host-volume-name" {
+    path      = "/vagrant/host_volumes/some-host-volume-name"
+    read_only = false
+  }
+}
+```
