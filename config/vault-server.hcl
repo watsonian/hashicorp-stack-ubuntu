@@ -10,7 +10,7 @@ storage "raft" {
   node_id = "vault1"
 }
 
-api_addr     = "http://172.28.128.253:8200"
+api_addr     = "http://0.0.0.0:8200"
 cluster_addr = "http://127.0.0.1:8201"
 
 # HTTP listener
