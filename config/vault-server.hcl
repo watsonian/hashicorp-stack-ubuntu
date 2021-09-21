@@ -26,13 +26,6 @@ listener "tcp" {
 #   tls_key_file  = "/opt/vault/tls/tls.key"
 # }
 
-# We aren't using Consul as the storage backend, but we still want
-# to register the Vault service with Consul
-service_registration "consul" {
-  address = "127.0.0.1:8500"
-  service_address = "172.28.128.253"
-}
-
 # Enterprise license_path
 # This will be required for enterprise as of v1.8
 license_path = "/vagrant/vault.lic"

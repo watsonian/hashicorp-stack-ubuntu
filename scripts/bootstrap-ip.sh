@@ -1,8 +1,8 @@
 #!/bin/bash
 
 mkdir -p /vagrant/env
-sudo mkdir -p /etc/nomad.d /etc/consul.d
-sudo chmod a+w /etc/nomad.d /etc/consul.d
+sudo mkdir -p /etc/nomad.d /etc/consul.d /etc/vault.d
+sudo chmod a+w /etc/nomad.d /etc/consul.d /etc/vault.d
 
 INTERFACE="${INTERFACE:=eth0}"
 ip=$(ifconfig ${INTERFACE} | grep "inet " | awk '{print $2}')
