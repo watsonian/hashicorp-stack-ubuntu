@@ -80,3 +80,9 @@ client {
   }
 }
 ```
+
+Note that Nomad expects these directories to exist already and the provisioning
+process won't automatically create them. If you want them in `/vagrant/host_volumes`
+then you should just create the directories in the `host_volumes` directory of
+this project prior to provisioning. If the directories don't exist, the clients
+will not start.
