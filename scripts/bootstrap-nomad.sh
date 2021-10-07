@@ -12,14 +12,14 @@ token=$(jq -r '.auth.client_token' /vagrant/nomad-server-vault-token.json)
 
 # drop the Vault configuration file
 if [ "$ROLE" = "client" ]; then
-    cat <<-EOF >> /etc/nomad.d/vault.hcl
+    cat <<-EOF > /etc/nomad.d/vault.hcl
 vault {
   enabled          = true
   address          = "http://vault.service.consul:8200"
 }
 EOF
 else
-    cat <<-EOF >> /etc/nomad.d/vault.hcl
+    cat <<-EOF > /etc/nomad.d/vault.hcl
 vault {
   enabled          = true
   address          = "http://vault.service.consul:8200"

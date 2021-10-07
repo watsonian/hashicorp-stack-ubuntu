@@ -6,7 +6,7 @@ sudo ln -sf /vagrant/config/vault-${ROLE}.hcl /etc/vault.d/vault.hcl
 
 # drop the Consul service registration file. this is required because
 # Vault currently doesn't support go-sockaddr templates.
-cat <<-EOF >> /etc/vault.d/consul-service-registration.hcl
+cat <<-EOF > /etc/vault.d/consul-service-registration.hcl
 # We aren't using Consul as the storage backend, but we still want
 # to register the Vault service with Consul
 service_registration "consul" {

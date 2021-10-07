@@ -14,7 +14,7 @@ mkdir -p /opt/cni/bin
 curl -sSL "$url" | tar -C /opt/cni/bin -xzf -
 
 # Ensure container traffic through bridge networks is allowed
-cat <<-EOF >> /etc/sysctl.d/99-cni-bridge-settings.conf
+cat <<-EOF > /etc/sysctl.d/99-cni-bridge-settings.conf
 net.bridge.bridge-nf-call-arptables = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
