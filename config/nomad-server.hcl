@@ -4,6 +4,8 @@ bind_addr = "0.0.0.0"
 
 log_level = "trace"
 
+enable_debug = true
+
 advertise {
     http = "{{ GetInterfaceIP \"eth1\" }}"
     rpc  = "{{ GetInterfaceIP \"eth1\" }}"
