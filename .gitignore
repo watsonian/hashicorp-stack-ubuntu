@@ -9,3 +9,4 @@ nomad-server-vault-token.json
 *.txt
 *.gitkeep
 *.token
+*.zip
