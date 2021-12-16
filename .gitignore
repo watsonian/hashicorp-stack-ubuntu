@@ -5,7 +5,7 @@ jobs/*
 vault-keys.json
 nomad-server-vault-token.json
 !*/.gitkeep
-.DS_Store
+*.DS_Store
 *.txt
-.gitkeep
-.token
+*.gitkeep
+*.token
