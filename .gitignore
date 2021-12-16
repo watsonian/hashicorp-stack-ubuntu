@@ -8,3 +8,4 @@ nomad-server-vault-token.json
 .DS_Store
 *.txt
 .gitkeep
+.token

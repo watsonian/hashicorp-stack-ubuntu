@@ -34,3 +34,7 @@ plugin "qemu" {
     image_paths = ["/mnt/image/paths"]
   }
 }
+
+acl {
+  enabled = true
+}

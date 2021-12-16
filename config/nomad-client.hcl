@@ -44,3 +44,7 @@ telemetry {
   publish_node_metrics       = true
   prometheus_metrics         = true
 }
+
+acl {
+  enabled = true
+}
