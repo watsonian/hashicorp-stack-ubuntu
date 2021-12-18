@@ -6,6 +6,14 @@ NOMAD_SERVERS  = 1  # should work with any number of nodes
 CONSUL_SERVERS = 1  # currently only tested with 1 node
 VAULT_SERVERS  = 1  # currently only tested with 1 node
 
+# Fix for Vagrant errors when specifying custom Host-Only attached adapter network #8878
+# https://github.com/hashicorp/vagrant/issues/8878
+class VagrantPlugins::ProviderVirtualBox::Action::Network
+  def dhcp_server_matches_config?(dhcp_server, config)
+    true
+  end
+end
+
 Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/vagrant"
   
