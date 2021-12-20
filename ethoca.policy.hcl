@@ -29,3 +29,7 @@ namespace "prd-*" {
 policy = "read"
 capabilities = ["read-logs", "read-job", "list-jobs", "read-fs"]
 }
+
+node {
+  policy = "read"
+}
